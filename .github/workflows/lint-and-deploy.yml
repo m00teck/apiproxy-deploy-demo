@@ -47,9 +47,8 @@ jobs:
       - name: Configure Service Account
         env:
           SERVICE_ACCOUNT_KEY: ${{ secrets.SERVICE_ACCOUNT_KEY }}
-          SERVICE_ACCOUNT_FILE: ${{ secrets.SERVICE_ACCOUNT_FILE }}
         run: |
-          echo "$SERVICE_ACCOUNT_KEY" > $SERVICE_ACCOUNT_FILE
+          echo "$SERVICE_ACCOUNT_KEY" > $GITHUB_ENV
 
       - name: Build API Proxy
         run: |
@@ -59,7 +58,7 @@ jobs:
       - name: Deploy API Proxy
         env:
           APIGEE_ORG: ${{ secrets.APIGEE_ORG }}
-          SERVICE_ACCOUNT_FILE: ${{ secrets.SERVICE_ACCOUNT_FILE }}
+          SERVICE_ACCOUNT_FILE: ${{ secrets.SERVICE_ACCOUNT_KEY }}
         run: |
           cd apiproxy
           mvn install -Ptest
