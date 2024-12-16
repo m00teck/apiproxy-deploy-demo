@@ -44,11 +44,11 @@ jobs:
       - name: Install Maven
         run: sudo apt-get install -y maven
 
-      - name: Configure Service Account
-        env:
-          SERVICE_ACCOUNT_KEY: ${{ secrets.SERVICE_ACCOUNT_KEY }}
-        run: |
-          echo "$SERVICE_ACCOUNT_KEY" > $GITHUB_ENV
+      # - name: Configure Service Account
+      #   env:
+      #     SERVICE_ACCOUNT_KEY: ${{ secrets.SERVICE_ACCOUNT_KEY }}
+      #   run: |
+      #     echo "$SERVICE_ACCOUNT_KEY" > $GITHUB_ENV
 
       - name: Build API Proxy
         run: |
