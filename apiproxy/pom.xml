@@ -1,6 +1,6 @@
 <project>
   <parent>
-    <groupId>com.example</groupId>
+    <groupId>apigee</groupId>
     <artifactId>parent-pom</artifactId>
     <version>1.0.0</version>
     <relativePath>../parent-pom/pom.xml</relativePath>
