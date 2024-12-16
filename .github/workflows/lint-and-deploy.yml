@@ -1,0 +1,64 @@
+# This is a basic workflow to help you get started with Actions
+name: Apigee Proxy CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  lint:
+    name: Lint API Proxy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install Apigee Linter
+        run: npm install -g apigeelint
+
+      - name: Run Linter
+        run: apigeelint -s apiproxy/ -f table.js
+
+  build-and-deploy:
+    name: Build and Deploy API Proxy
+    runs-on: ubuntu-latest
+    needs: lint
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+
+      - name: Install Maven
+        run: sudo apt-get install -y maven
+
+      - name: Configure Service Account
+        env:
+          SERVICE_ACCOUNT_KEY: ${{ secrets.SERVICE_ACCOUNT_KEY }}
+          SERVICE_ACCOUNT_FILE: ${{ secrets.SERVICE_ACCOUNT_FILE }}
+        run: |
+          echo "$SERVICE_ACCOUNT_KEY" > $SERVICE_ACCOUNT_FILE
+
+      - name: Build API Proxy
+        run: |
+          cd apiproxy
+          mvn clean package
+
+      - name: Deploy API Proxy
+        env:
+          APIGEE_ORG: ${{ secrets.APIGEE_ORG }}
+          SERVICE_ACCOUNT_FILE: ${{ secrets.SERVICE_ACCOUNT_FILE }}
+        run: |
+          cd apiproxy
+          mvn install -Ptest
