@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<HTTPModifier continueOnError="false" enabled="true" name="HTTPM-AssingRequestHeader">
+  <DisplayName>HTTPM-AssingRequestHeader</DisplayName>
+  <Properties/>
+  <Add>
+    <Headers>
+      <Header name="X-Hello-Apigee">Hello tutkapaw!</Header>
+    </Headers>
+  </Add>
+  <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+  <AssignTo createNew="false" transport="http" type="request"/>
+</HTTPModifier>

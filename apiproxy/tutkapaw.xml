@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="8" name="tutkapaw">
+  <DisplayName/>
+  <Description>tutkapaw proxy</Description>
+  <CreatedAt>1734360265843</CreatedAt>
+  <LastModifiedAt>1734361490658</LastModifiedAt>
+  <BasePaths>/tutkapaw</BasePaths>
+  <Policies>
+    <Policy>HTTPM-AssingRequestHeader</Policy>
+    <Policy>HTTPM-AssignResponseHeader</Policy>
+    <Policy>J2X-Transform</Policy>
+    <Policy>HTTPM-HelloFromEcho</Policy>
+    <Policy>RF-NotFound</Policy>
+  </Policies>
+  <ProxyEndpoints>
+    <ProxyEndpoint>default</ProxyEndpoint>
+  </ProxyEndpoints>
+  <TargetEndpoints>
+    <TargetEndpoint>default</TargetEndpoint>
+  </TargetEndpoints>
+</APIProxy>

@@ -1,0 +1,9 @@
+<project>
+  <parent>
+    <groupId>com.example</groupId>
+    <artifactId>parent-pom</artifactId>
+    <version>1.0.0</version>
+  </parent>
+  <artifactId>tutkapaw</artifactId>
+  <packaging>bundle</packaging>
+</project>

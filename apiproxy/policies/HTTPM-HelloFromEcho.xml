@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<HTTPModifier continueOnError="false" enabled="true" name="HTTPM-HelloFromEcho">
+  <DisplayName>HTTPM-HelloFromEcho</DisplayName>
+  <Add>
+    <Headers>
+      <Header name="Hello-From-Echo">Hello-From-Echo</Header>
+    </Headers>
+  </Add>
+  <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+  <AssignTo createNew="false" transport="http" type="request"/>
+</HTTPModifier>

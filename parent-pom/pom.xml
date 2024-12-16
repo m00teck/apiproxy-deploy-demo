@@ -1,0 +1,15 @@
+<project>
+  <!-- Other configurations -->
+
+  <profiles>
+    <profile>
+      <id>test</id>
+      <properties>
+        <apigee.org>${env.APIGEE_ORG}</apigee.org>
+        <apigee.env>test-env</apigee.env>
+        <apigee.serviceaccount.file>${env.SERVICE_ACCOUNT_FILE}</apigee.serviceaccount.file>
+      </properties>
+    </profile>
+    <!-- Add more profiles as needed -->
+  </profiles>
+</project>
