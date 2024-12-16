@@ -3,6 +3,7 @@
     <groupId>com.example</groupId>
     <artifactId>parent-pom</artifactId>
     <version>1.0.0</version>
+    <relativePath>../parent-pom/pom.xml</relativePath>
   </parent>
   <artifactId>tutkapaw</artifactId>
   <packaging>bundle</packaging>
