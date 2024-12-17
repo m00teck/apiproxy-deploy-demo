@@ -44,19 +44,19 @@ jobs:
       - name: Install Maven
         run: sudo apt-get install -y maven
 
-      # - name: Configure Service Account
-      #   env:
-      #     SERVICE_ACCOUNT_KEY: ${{ secrets.SERVICE_ACCOUNT_KEY }}
-      #   run: |
-      #     echo "$SERVICE_ACCOUNT_KEY" > $GITHUB_ENV
-
       - name: Build API Proxy
         run: |
           mvn clean package
+
+      - name: Configure Service Account
+        env:
+          SERVICE_ACCOUNT_KEY: ${{ secrets.SERVICE_ACCOUNT_KEY }}
+        run: |
+          echo "$SERVICE_ACCOUNT_KEY" > sa-deploy-apigee.json
 
       - name: Deploy API Proxy
         env:
           APIGEE_ORG: ${{ secrets.APIGEE_ORG }}
           SERVICE_ACCOUNT_FILE: ${{ secrets.SERVICE_ACCOUNT_KEY }}
         run: |
-          mvn install -Ptest
+          mvn install -Ptest -Dfile=./sa-deploy-apigee.json
