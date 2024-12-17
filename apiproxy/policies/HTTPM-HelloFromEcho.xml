@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<AssignMessage continueOnError="false" enabled="true" name="HTTPM-HelloFromEcho">
+<AssignMessag continueOnError="false" enabled="true" name="HTTPM-HelloFromEcho">
   <DisplayName>HTTPM-HelloFromEcho</DisplayName>
   <Add>
     <Headers>
@@ -8,4 +8,4 @@
   </Add>
   <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
   <AssignTo createNew="false" transport="http" type="request"/>
-</AssignMessage>
+</AssignMessag>
