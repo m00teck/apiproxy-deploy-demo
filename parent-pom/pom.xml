@@ -31,8 +31,8 @@
                 <version>2.5.1</version> <!-- Use the latest stable version -->
                 <extensions>true</extensions>
                 <configuration>
-                    <apigeeConfigDir>./config</apigeeConfigDir>
-                    <apigeeProxyDir>./apiproxy</apigeeProxyDir>
+                    <apigeeConfigDir>../config</apigeeConfigDir>
+                    <apigeeProxyDir>../apiproxy</apigeeProxyDir>
                 </configuration>
             </plugin>
         </plugins>
