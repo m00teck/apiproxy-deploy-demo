@@ -57,6 +57,5 @@ jobs:
       - name: Deploy API Proxy
         env:
           APIGEE_ORG: ${{ secrets.APIGEE_ORG }}
-          SERVICE_ACCOUNT_FILE: ${{ secrets.SERVICE_ACCOUNT_KEY }}
         run: |
-          mvn install -Ptest -Dfile=./sa-deploy-apigee.json
+          mvn install -Ptest -Dfile=./sa-deploy-apigee.json -Dorg=$APIGEE_ORG
