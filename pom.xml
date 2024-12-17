@@ -6,7 +6,7 @@
         <groupId>com.nobleprog</groupId>
         <artifactId>parent-pom</artifactId>
         <version>1.0.0</version>
-        <relativePath>../parent-pom/pom.xml</relativePath> <!-- Adjust if necessary -->
+        <relativePath>./parent-pom/pom.xml</relativePath> <!-- Adjust if necessary -->
     </parent>
     <artifactId>tutkapaw</artifactId>
     <packaging>pom</packaging>
