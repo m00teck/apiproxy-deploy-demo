@@ -11,7 +11,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <apigee.plugin.version>2.x</apigee.plugin.version> <!-- Use the appropriate version -->
+        <apigee.plugin.version>2.5.1</apigee.plugin.version> <!-- Use the appropriate version -->
     </properties>
 
     <build>
