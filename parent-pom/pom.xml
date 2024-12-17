@@ -98,9 +98,9 @@
             <properties>
                 <apigee.hosturl>https://apigee.googleapis.com</apigee.hosturl>
                 <apigee.apiversion>v1</apigee.apiversion>
-                <apigee.org>${env.APIGEE_ORG}</apigee.org>
+                <apigee.org>${secrets.APIGEE_ORG}</apigee.org>
                 <apigee.env>test-env</apigee.env>
-                <apigee.serviceaccount.file>${env.SERVICE_ACCOUNT_KEY}</apigee.serviceaccount.file>
+                <apigee.serviceaccount.file>${file}</apigee.serviceaccount.file>
             </properties>
         </profile>
         <!-- Add more profiles as needed -->
