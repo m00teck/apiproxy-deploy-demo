@@ -52,7 +52,6 @@ jobs:
 
       - name: Build API Proxy
         run: |
-          cd apiproxy
           mvn clean package
 
       - name: Deploy API Proxy
@@ -60,5 +59,4 @@ jobs:
           APIGEE_ORG: ${{ secrets.APIGEE_ORG }}
           SERVICE_ACCOUNT_FILE: ${{ secrets.SERVICE_ACCOUNT_KEY }}
         run: |
-          cd apiproxy
           mvn install -Ptest
