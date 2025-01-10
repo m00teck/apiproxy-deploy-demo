@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<AssignMessag continueOnError="false" enabled="true" name="HTTPM-AssignResponseHeader">
+<AssignMessage continueOnError="false" enabled="true" name="HTTPM-AssignResponseHeader">
   <DisplayName>HTTPM-AssignResponseHeader</DisplayName>
   <Properties/>
   <Add>
@@ -9,4 +9,4 @@
   </Add>
   <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
   <AssignTo createNew="false" transport="http" type="response"/>
-</AssignMessag>
+</AssignMessage>
